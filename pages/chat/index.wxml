@@ -1,0 +1,41 @@
+
+<view class='container'>
+    <view class='chatGroup'>
+        <!-- 对话框 -->
+        <scroll-view scroll-y style="height:{{ viewHeight }}rpx; " bindscroll="scroll" scroll-with-animation='{{ isAnimation }}' scroll-into-view="{{ toView }}" scroll-top="{{ scrollTop }}" >
+            <view class='chatWrap'>
+                <!-- 提示信息等 -->
+                <view class='chatLabel auto'>
+                    <image class='avatar' src='http://localhost:3001/img/ad_house.png'></image>
+                    <view class='articleBox'><text>您好，很高兴为您服务</text></view>
+                </view>
+                <van-divider contentPosition="center">已为您切换人工服务</van-divider>
+                <!-- 聊天框 -->
+                <view wx:for="{{MsgList}}">
+                    <!-- 我的 -->
+                    <view class="chatLabel" wx:if="{{item.type=='my'}}">
+                        <image class='avatar' src='http://localhost:3001/img/{{item.senderImg}}'></image>
+                        <view class='articleBox'>{{item.msg}}</view>
+                    </view>
+                    <!-- 他的 -->
+                    <view class='chatLabel auto' wx:if="{{item.type=='user'}}" >
+                        <image class='avatar' src='http://localhost:3001/img/{{item.senderImg}}'></image>
+                        <view class='articleBox'>{{item.msg}}</view>
+                    </view>
+                </view>
+            </view>
+            <view id="toFooter"></view>
+        </scroll-view>
+        <!-- 回复框 -->
+        <view class='chatFooterGroup' id='footerBtnGroup'>
+          <form bindsubmit="formSubmit">
+              <view class='textInputBox'>
+                  <input class="textInput" model:value='{{ useMsg }}' name="useMsg" cursor-spacing="20" placeholder="输入想问的问题吧" placeholder-style="color:#999;" bindinput="bindInputValue" />
+              </view>
+              <view class='sendMsgBox'>
+                <button class='sendBtn gray' bindtap="sendMsg">发 送</button>
+              </view>
+          </form>
+        </view>
+    </view>
+</view>

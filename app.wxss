@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3345610 */
+  src: url('//at.alicdn.com/t/font_3345610_jigmhj2txq7.woff2?t=1652929160896') format('woff2'), url('//at.alicdn.com/t/font_3345610_jigmhj2txq7.woff?t=1652929160896') format('woff'), url('//at.alicdn.com/t/font_3345610_jigmhj2txq7.ttf?t=1652929160896') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-peer-pay:before {
+  content: "\e600";
+}
+.icon-star:before {
+  content: "\e7df";
+}
+.icon-dingdan:before {
+  content: "\e645";
+}
+.icon-fangdajing:before {
+  content: "\e617";
+}
+.icon-user:before {
+  content: "\e7ae";
+}
+.icon-fangwu:before {
+  content: "\e669";
+}
+.icon-zhinanzhen:before {
+  content: "\e684";
+}
+.icon-kuandai:before {
+  content: "\e6ba";
+}
+.icon-xiyiji:before {
+  content: "\e67d";
+}
+.icon-dianshiji:before {
+  content: "\e90a";
+}
+.icon-kongtiao:before {
+  content: "\e90d";
+}
+.icon-chuang:before {
+  content: "\e619";
+}
+.icon-youyanji:before {
+  content: "\e62e";
+}
+.icon-shafa:before {
+  content: "\e606";
+}
+.icon-bingxiang:before {
+  content: "\ec4f";
+}
+.icon-duliweishengjian:before {
+  content: "\e613";
+}
+.icon-yigui:before {
+  content: "\e60d";
+}
+.icon-lock:before {
+  content: "\e62b";
+}
+.icon-yangtai-1:before {
+  content: "\e78f";
+}
+.icon-chat:before {
+  content: "\e69d";
+}
+.icon-quanping_o:before {
+  content: "\eb99";
+}
+.icon-menu:before {
+  content: "\e630";
+}
+.icon-editor:before {
+  content: "\e6f6";
+}
+.icon-data:before {
+  content: "\e6f9";
+}
+.icon-rmb:before {
+  content: "\e703";
+}
+.icon-company:before {
+  content: "\e748";
+}
+.icon-warehouse:before {
+  content: "\e76d";
+}
+.icon-wuliudingdan:before {
+  content: "\e7c7";
+}
+.icon-bussiness-man:before {
+  content: "\e6ef";
+}
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page {
+  --themeColor: #d81e06;
+  font-size: 28rpx;
+}
+image {
+  width: 100%;
+}

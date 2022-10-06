@@ -1,0 +1,11 @@
+/* pages/register/index.wxss */
+.bottom {
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+}
+.left {
+  position: fixed;
+  bottom: 4%;
+  left: 9%;
+}

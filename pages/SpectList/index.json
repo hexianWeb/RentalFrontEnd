@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "HouseCard":"../../components/HouseCard/index",
+    "searchInput":"../../components/searchInput/searchInput",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-steps": "@vant/weapp/steps/index"
+  }
+}

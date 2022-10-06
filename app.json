@@ -1,0 +1,78 @@
+{
+  "entryPagePath": "pages/login/index",
+  "pages": [
+    "pages/index/index",
+    "pages/my/index",
+    "pages/chat/index",
+    "pages/spect/index",
+    "pages/search/index",
+    "pages/login/index",
+    "pages/logs/logs",
+    "pages/find/index",
+    "pages/showHouse/index",
+    "pages/showDetail/index",
+    "pages/showSpect/index",
+    "pages/test/index",
+    "pages/star/index",
+    "pages/SpectList/index",
+    "pages/MyInfo/index",
+    "pages/register/index",
+    "components/HouseCard/index",
+    "components/EstateCard/index",
+    "components/Basic/index",
+    "components/mapDetail/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+  }
+},
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "routePlan": {
+    "version": "1.0.19",
+    "provider": "wx50b5593e81dd937a"
+    }
+},
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#0B0B0B",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/房屋 (1).png",
+        "selectedIconPath": "icon/房屋.png"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "text": "找房",
+        "iconPath": "icon/放大镜 (1).png",
+        "selectedIconPath": "icon/放大镜.png"
+      },
+      {
+        "pagePath": "pages/chat/index",
+        "text": "探索",
+        "iconPath": "icon/指南针 (1).png",
+        "selectedIconPath": "icon/指南针.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "个人",
+        "iconPath": "icon/user (1).png",
+        "selectedIconPath": "icon/user.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "客服",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-divider": "@vant/weapp/divider/index"
+  }
+}

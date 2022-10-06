@@ -1,0 +1,57 @@
+<!-- 总体框架 -->
+<view class="container">
+     <!-- 搜索框 -->
+    <searchInput></searchInput>
+    <view class="index_swiper">
+          <swiper
+              indicator-dots="{{indicatorDots}}"
+              autoplay="{{autoplay}}"
+              interval="{{interval}}"
+              duration="{{duration}}"
+              previous-margin="{{previousMargin}}" 
+              next-margin="{{nextMargin}}"
+              circular="{{circular}}"
+              bindchange="swiperBindchange"
+            >
+            <block wx:for="{{swiperList}}">
+              <swiper-item>
+                <image src="{{item}}" class="slide-image {{currentSwiperIndex == index ? 'zoom-in' : 'zoom-out'}}"/>
+              </swiper-item>
+            </block>
+          </swiper>
+    </view>
+    <!--轮播图结束-->
+    <!-- 静态广告开始 -->
+    <view class="ad_zhuye">
+      <view class="one_item">
+        <view class="img">
+          <image src="../../icon/toolbar1.png"></image>
+        </view>
+
+      </view>
+      <view class="one_item">
+          <view class="img">
+           <image src="../../icon/tool_bar2.png"></image>
+          </view>
+       </view>
+    </view>
+    
+    <view class="showPic">
+          <view class="l_content">
+              <image src="http://localhost:3001/img/ad_house6.jpg" />
+          </view>
+          <view class="r_content">
+            <view class="top_content">
+              <image src="http://localhost:3001/img/ad_house1.png" />
+            </view>
+            <view class="bottom_content">
+              <image src="http://localhost:3001/img/ad_house5.jpg" />
+            </view>
+          </view>
+    </view>
+    <!-- goodlist-->
+    <view class="goodslist" wx:for="{{ListData}}" >
+      <van-divider />
+      <EstateCard EstateData="{{item}}"></EstateCard>
+    </view>
+</view>

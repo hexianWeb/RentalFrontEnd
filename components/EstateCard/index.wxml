@@ -1,0 +1,39 @@
+    <!-- goodlist-->
+      <view class="goods_item" bindtap="HandleShowList">
+        <!-- 标题 Done -->
+        <view class="title">
+          {{EstateData.estate_title}}
+            <view class="icon">
+                共有房{{EstateData.house.length}}套出租
+              <van-icon name="arrow" />
+            </view>
+          <view class="desc">
+            {{EstateData.desc}}
+          </view>
+        </view>
+        <!-- 上侧容器 -->
+        <view class="top_content">
+            <image src="{{picRoot}}{{EstateData.house[0].pic}}"></image>
+            <!-- <image src="http:localhost:3001/img/e104569a-c0c4-4968-9b28-0268e1113bfe.png"></image> -->
+        </view>
+        <!-- 下侧容器 -->
+        <view class="bot_content">
+          <view class="title">
+            <!-- 房名-->
+            {{EstateData.house[0].title}}
+            <view class="desc">
+              <van-icon name="location-o" />
+              {{EstateData.city}}{{EstateData.area}}{{EstateData.address}}
+            </view>
+            <view class="bot_desc">
+            <!-- 标签 -->
+              <view class="tag">
+                <van-tag type="danger" wx:for="{{EstateData.type}}">{{item}}</van-tag>
+              </view>
+              <view class="price" style="color:#AA8971">
+                ￥{{EstateData.house[0].rent}}/月
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>

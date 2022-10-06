@@ -1,0 +1,10 @@
+<view class="container">
+  <block wx:if="{{starHouse.length !=0}}" >
+  <view wx:for="{{starHouse}}">
+    <HouseCard HouseData="{{item.HouseData}}" address= "{{item.address}}"></HouseCard>
+  </view>
+  </block>
+  <block wx:else>
+    <van-empty description="还没有收藏房屋 快去收藏吧" />
+  </block>
+</view>

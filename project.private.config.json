@@ -1,0 +1,113 @@
+{
+  "projectname": "miniweixin",
+  "setting": {
+    "compileHotReLoad": false,
+    "urlCheck": false
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "个人中心",
+          "pathName": "pages/my/index",
+          "query": "status=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "找房页面",
+          "pathName": "pages/search/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "展示房屋信息",
+          "pathName": "pages/showDetail/index",
+          "query": "id=122&address=红谷滩九龙湖西站地区2288号",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "房屋列表信息",
+          "pathName": "pages/showHouse/index",
+          "query": "id=45&address=红谷滩九龙湖西站地区2288号",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "房屋细节",
+          "pathName": "pages/showDetail/index",
+          "query": "house_id=126&address='ECJTU'",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "房屋订单",
+          "pathName": "pages/spect/index",
+          "query": "id=122&address=红谷滩九龙湖西站地区2288号",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "确认订单",
+          "pathName": "pages/showSpect/index",
+          "query": "id=122&date=5/21",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "Store测试",
+          "pathName": "pages/test/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "订单列表",
+          "pathName": "pages/SpectList/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "聊天界面",
+          "pathName": "pages/chat/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人信息展示",
+          "pathName": "pages/MyInfo/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "注册页面",
+          "pathName": "pages/register/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "登录",
+          "pathName": "pages/login/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "搜索栏",
+          "pathName": "pages/find/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "libVersion": "2.24.2"
+}

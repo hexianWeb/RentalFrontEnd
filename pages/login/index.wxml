@@ -1,0 +1,28 @@
+<!--pages/login/index.wxml-->
+<view class="container">
+  <van-notify id="van-notify"/>
+    <canvas id="canvas" type="2d" style="width: 600rpx; height: 600rpx; margin: 50rpx auto;">
+    </canvas>
+    <view class="form">
+      <van-cell-group inset custom-class="shadow">
+        <van-field
+        model:value="{{ username }}"
+          required
+          clearable
+          label="账号"
+          placeholder="请输入账号"
+        />
+        <van-toast id="van-toast" />
+        <van-field
+        model:value="{{ password }}"
+          type="password"
+          label="密码"
+          placeholder="请输入密码"
+          required
+        />
+        <span style="float: right; margin: 20rpx; color:#666666" bindtap="registerUser">注册账号</span>
+        <van-button type="info" block round bindtap="submit" >登录</van-button>  
+      </van-cell-group>
+
+    </view>
+</view>

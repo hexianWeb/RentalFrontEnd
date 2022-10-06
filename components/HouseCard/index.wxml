@@ -1,0 +1,22 @@
+<van-card
+  tag="{{HouseData.paymentMethod}}"
+  price="{{HouseData.rent}}/月"
+  title="{{HouseData.title}}"
+  thumb="{{picRoot}}{{HouseData.pic}}"
+  title-class="title"
+  thumb-class="thumb"
+  price-class="price"
+  custom-class="custom"
+  bindtap="handleHouseDetail"
+>
+
+<!-- <view slot="price-top" class="price-top" wx:if="{{address}}"> -->
+<view slot="price-top" class="price-top" >
+  <van-icon name="location-o" /> {{address}}
+</view>
+  <view slot="desc" class="desc" >
+    <van-tag type="danger" plain custom-class="tag">朝{{HouseData.orientataion}}</van-tag>
+    <van-tag type="danger" plain custom-class="tag">{{HouseData.rentMethod}}</van-tag>
+    <van-tag type="danger" plain custom-class="tag">处于{{HouseData.floor}}层</van-tag>
+  </view>
+</van-card>

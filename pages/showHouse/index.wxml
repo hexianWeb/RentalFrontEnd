@@ -1,0 +1,45 @@
+<!-- 房源列表展示 -->
+<searchInput></searchInput>
+<!-- 弹出内容  -->
+<van-popup show="{{ show }}" bind:close="onClose"   position="top"
+>
+<!-- 三级地图 -->
+<van-area area-list="{{ areaList }}" wx:if="{{showContent=='area'}}" value="36000"
+columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+bind:confirm="handleArea"
+/>
+<!-- 滑动 -->
+<view class="slider"wx:if="{{showContent=='rent'}}" >
+<view class="rentNumber">
+  <view class="left">
+    ￥{{rentValue[0]}}/月
+  </view>
+  <view class="right">
+    ￥{{rentValue[1]}}/月
+  </view>
+</view>
+  <van-slider min="800" max="4500" range value="{{rentValue}}" bar-height="4px" active-color="#ee0a24" bind:change="onSliderChange" 
+  >
+  </van-slider>
+  <view class="bottom">
+    <van-button custom-class="bottom"  size="small" color="#7232dd" bindtap="onReset">重置</van-button>
+    <van-button  custom-class="bottom"  size="small" color="linear-gradient(to right, #fc4a1a, #f7b733)" bindtap="handleRent">
+      确认
+    </van-button>
+  </view>
+</view>
+</van-popup>
+<!-- 工具栏 -->
+<view class="toolbar">
+  <van-tabs animated  swipeable active="{{}}" bind:change="onChange"  bindtap="onShowPop">
+
+  <van-tab  title="{{targetPrice?'最低'+rentValue[0]+'元/月':'租金'}}" name="rent"></van-tab>
+  <van-tab title="更多" name="more"></van-tab>
+</van-tabs>
+</view>
+
+<view wx:for="{{HouseList}}" wx:key="{{item.house_id}}">
+<!-- && item.status == 0 -->
+  <HouseCard HouseData="{{item}}" address="{{address}}" wx:if="{{item.rent>=rentValue[0] && item.rent<=rentValue[1]&& item.status == 0  }}">
+  </HouseCard>
+</view>

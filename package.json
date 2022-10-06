@@ -1,0 +1,23 @@
+{
+  "name": "miniweixin",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/area-data": "^1.2.4",
+    "@vant/weapp": "^1.10.3",
+    "axios": "^0.27.2",
+    "lottie-miniapp": "^1.9.1",
+    "lottie-miniprogram": "^1.0.12",
+    "mobx-miniprogram": "^4.13.2",
+    "mobx-miniprogram-bindings": "^1.2.1",
+    "moment": "^2.29.3",
+    "weapp.socket.io": "^3.0.0"
+  }
+}

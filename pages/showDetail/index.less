@@ -1,0 +1,108 @@
+.Container{
+    .house_img{
+         padding: 12rpx;
+         box-shadow:2px 2px 10px #ccc;
+    }
+// 标题
+    .title{
+        margin-top: 10rpx;
+        font-size: 33rpx;
+        font-weight: 550;
+        color: #1a1a1a;
+        margin-left: 15rpx;
+    }
+
+    .hotel_info {
+      margin-top: 20rpx;
+      .hotel_name {
+        color: black;
+        font-size: 32rpx;
+        font-weight: 600;
+      }
+      // 付款样式
+      .pay {
+        margin-top: 20rpx;
+        display: flex;
+        .hotel_price {
+          flex: 5;
+          color: #da2020;
+          font-size: 28rpx;
+          .bold {
+            font-size: 32rpx;
+            font-weight: 600;
+          }
+        }
+        .payfor {
+          flex: 2;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          align-items: center;
+          color: #888888;
+        }
+      }
+    }
+    // ad_info
+    .ad_info {
+      .ad {
+        margin-top: 15rpx;
+        padding-left: 10rpx;
+        margin-bottom: 15rpx;
+        border-left: 10rpx solid #ff6f71;
+        &:nth-child(2) {
+          border-left: 10rpx solid #bbbbbb;
+        }
+        &:nth-child(3) {
+          border-left: 10rpx solid #bbbbbb;
+        }
+      }
+    }
+    // address
+    .address {
+      margin-top: 20rpx;
+      padding-bottom: 13rpx;
+      // border-bottom: 5rpx solid #868080;
+      .dent_info {
+        padding: 0;
+        .dent {
+          margin-bottom: 30rpx;
+        }
+      }
+      .hotel_fundmentally {
+        margin-top: 25rpx;
+        .fundment {
+          margin-top: 45rpx;
+          text-align: center;
+        }
+      }
+      .master_info {
+        margin-top: 25rpx;
+        .master_cell {
+          margin-top: 30rpx;
+          .fundment {
+            margin-top: 20rpx;
+            text-align: center;
+          }
+        }
+      }
+      .map {
+        margin-top: 45rpx;
+        display: flex;
+        margin-bottom: 400rpx;
+        .map_title {
+          flex: 5;
+          .map_info {
+            width: 100%;
+            float: right;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+
+    // 底
+    .bottom_tool {
+      margin-top: 20rpx;
+    }
+}

@@ -1,0 +1,56 @@
+<view class="container">
+  <van-notify id="van-notify"/>
+  <HouseCard HouseData="{{HouseData}}" address="{{address}}">
+  </HouseCard>
+  <van-cell-group>
+  <van-cell value="" custom-class="cell_title">
+  <view slot="title">
+    <view class="van-cell-text">联系人信息</view>
+  </view>
+  </van-cell>
+<!-- 姓名 -->
+  <van-cell value="{{UserInfo.realname}}" icon="user-o" custom-class="cell_margin">
+  <view slot="title">
+    <view class="van-cell-text">姓名</view>
+  </view>
+  </van-cell>
+  <!-- 称呼 -->
+    <van-cell value="{{UserInfo.sex=='男'?'先生':'女士'}}" icon="flower-o" custom-class="cell_margin">
+    <view slot="title">
+      <view class="van-cell-text">称呼</view>
+    </view>
+    </van-cell>
+    <!-- 手机号 -->
+    <van-cell value="{{UserInfo.user_phone}}" icon="phone-o" custom-class="cell_margin">
+    <view slot="title">
+      <view class="van-cell-text">手机号</view>
+    </view>
+    </van-cell>
+    <!-- 身份证 -->
+    <wxs module="showIDNum">
+      var bar = function (idNum) {
+        return idNum;
+      }
+      module.exports = {
+        bar: bar,
+      };
+    </wxs>
+    <van-cell value="{{showIDNum.bar(UserInfo.IdNum,show)}}" icon="eye-o" custom-class="cell_margin" clickable="{{true}}">
+    <view slot="title">
+      <view class="van-cell-text" >身份证</view>
+    </view>
+    </van-cell>
+    <van-cell value="{{date?date:'随时可看'}}" icon="underway-o" custom-class="cell_margin">
+    <view slot="title">
+      <view class="van-cell-text">期望看房时间</view>
+    </view>
+    </van-cell>
+</van-cell-group>
+<view class="bottom_tool">
+<van-button type="primary" block color="#FFA001" bindtap="handleSpect">
+  <view>
+    审核无误
+  </view>
+</van-button>
+</view>
+</view>

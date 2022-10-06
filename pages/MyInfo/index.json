@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-popup": "@vant/weapp/popup/index", 
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
+}

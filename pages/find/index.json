@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "EstateCard":"../../components/EstateCard/index"
+  }
+}

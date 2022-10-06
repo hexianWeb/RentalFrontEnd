@@ -1,0 +1,25 @@
+@import "./styles/iconfont.wxss";
+// 主题颜色
+@themeColor: #d81e06;
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // 可以使用此属性来模拟不正确支持CSS盒子模型规范的游览器行为。
+}
+
+page {
+  // 定义主题颜色
+  --themeColor: @themeColor;
+  // 定义统一的字体大小
+  font-size: 28rpx;
+}
+image {
+  width: 100%;
+}

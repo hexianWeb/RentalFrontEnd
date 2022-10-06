@@ -1,0 +1,23 @@
+<van-search
+  label="地址"
+  model:value="{{ input }}"
+  placeholder="请输入搜索关键词"
+  show-action
+  background="#d81e06"
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+>
+</van-search>
+<van-notify id="van-notify"/>
+<view class="container">
+  <view wx:if="{{!isShow}}">
+  <!-- 搜索提示 -->
+    <van-empty image="search" description="请输入搜索关键词" />
+  </view>
+  <view wx:if="{{isShow}}" >
+    <view class="goodslist" wx:for="{{ListData}}" >
+      <van-divider />
+      <EstateCard EstateData="{{item}}"></EstateCard>
+    </view>
+  </view>
+</view>

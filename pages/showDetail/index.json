@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "房源列表",
+  "usingComponents": {
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "Basic":"/components/Basic/index",
+    "mapDetail":"/components/mapDetail/index"
+  }
+}

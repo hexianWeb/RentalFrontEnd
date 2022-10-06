@@ -1,0 +1,30 @@
+.toolbar {
+  background-color: #ee0a24;
+}
+.toolbar van-tabs {
+  width: 100%;
+}
+.slider {
+  margin-top: 80rpx;
+  height: 225rpx;
+}
+.slider .rentNumber {
+  display: flex;
+  padding: 20rpx;
+  font-size: 31rpx;
+}
+.slider .rentNumber .left {
+  float: left;
+  flex: 1;
+}
+.slider .rentNumber .right {
+  float: right;
+}
+.slider .bottom {
+  margin: 20rpx;
+  display: flex;
+}
+.slider .bottom van-button {
+  margin: 0 auto;
+  flex: 1;
+}

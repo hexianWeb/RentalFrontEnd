@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "注册页面",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
+}

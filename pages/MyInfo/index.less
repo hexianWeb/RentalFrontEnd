@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: -1;
+  overflow: hidden;
+  .userinfo {
+    margin-top: 7rpx;
+    &::after {
+      content: "";
+      width: 140%;
+      height: 100%;
+      position: absolute;
+      border-radius: 0 0 50% 50%;
+      left: -20%;
+      top: -20%;
+      z-index: -1;
+      background-image: linear-gradient(135deg, #e96d71 10%, #fa742b 100%);
+    }
+  }
+}
+.master_info {
+  width: 100%;
+  margin-top: 0rpx;
+  van-cell {
+    width: 100% !important;
+    color: black !important;
+  }
+}

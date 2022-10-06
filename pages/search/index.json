@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-area": "@vant/weapp/area/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "searchInput":"../../components/searchInput/searchInput",
+    "EstateCard":"../../components/EstateCard/index"
+  },
+  "navigationBarTitleText": "找房"
+}

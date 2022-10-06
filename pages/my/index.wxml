@@ -1,0 +1,57 @@
+
+<!--总体容器-->
+<view class="container">
+<!--消息提示栏-->
+<van-notify id="van-notify" />
+<!-- <van-popup
+  show="{{ show }}"
+  position="bottom"
+  custom-style="height: 60%;"
+  bind:close="onClose"
+>
+</van-popup> -->
+<!--用户信息（原生）-->
+  <view class="userinfo">
+      <image  class="userinfo-avatar" src="{{avatar}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{user_name}}</text>
+  </view>
+      <view class="menu">
+          <van-grid>
+            <van-grid-item icon="star-o" text="我的收藏" bindtap="showHouseStar"/>
+            <van-grid-item icon="balance-list-o" text="订单详情" bindtap="showSpect"/>
+            <van-grid-item icon="logistics" text="约看" bindtap="goOrder"/>
+            <van-grid-item icon="refund-o" text="售后服务" bindtap="returnMoney"/>
+          </van-grid>
+    </view>
+            <!--横向导航栏-->
+            <view class="nav">
+          <van-collapse value="{{ activeNames }}" bind:change="onChange"   bind:close="onClose"
+>
+               <!--个人信息-->
+            <van-collapse-item title="个人信息" name="1">
+                <van-cell-group>
+                  <van-cell title="信息展示"  value="展开"icon="star-o" bindtap="onShowMyInfo" />
+                  <!-- <van-cell title="收货地址" is-link value="填写"icon="wap-home-o" bindtap="handleChooseaddress"/> -->
+                  <van-cell title="绑定手机" is-link value="绑定"icon="phone-o" url="" bindtap="nothing" />  <!--无-->
+                  <van-cell title="更改密码" is-link value="更改"icon="setting-o" url="" bindtap="noRight" /><!--无-->
+                </van-cell-group>
+            </van-collapse-item>
+            <van-collapse-item title="积分商城" name="2">
+                   <van-cell-group>
+                      <van-cell title="优惠券" is-link value="展开"icon="coupon-o" url="" />
+                      <van-collapse-item title="转发有礼" is-link value=""icon="share-o" url="" >
+                        <button  type="primary"open-type="share" bindtap="onShareAppMessage">立刻分享</button>
+                      </van-collapse-item>
+                  </van-cell-group>
+            </van-collapse-item>
+            <van-collapse-item title="其他" name="3" >
+                <van-cell-group>
+                      <van-cell title="退出登录" is-link value=""icon="bar-chart-o" url="" bindtap="signOut" />
+                      <van-cell title="关于作者" is-link value="作者：何贤"icon="user-o" url="../about/index" />
+                  </van-cell-group>
+            </van-collapse-item>
+          </van-collapse>
+        </view>
+          
+</view>
+

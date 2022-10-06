@@ -1,0 +1,34 @@
+.container .userinfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f2f2f2;
+  z-index: -1;
+  overflow: hidden;
+}
+.container .userinfo::after {
+  content: "";
+  width: 140%;
+  height: 100%;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+  background: linear-gradient(140deg, var(--themeColor), #e96d71);
+}
+.container .userinfo .userinfo-avatar {
+  top: 13%;
+  overflow: hidden;
+  width: 168rpx;
+  height: 168rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.container .userinfo .userinfo-nickname {
+  font-size: 30rpx;
+}
+.container .userinfo .nav van-collapse van-collapse-item {
+  border-radius: 10%;
+}

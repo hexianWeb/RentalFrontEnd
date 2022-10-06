@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-notify": "@vant/weapp/notify/index"
+  },
+  "navigationBarTitleText": "登陆页面",
+  "navigationBarBackgroundColor": "#eee",
+  "navigationBarTextStyle": "black"
+}

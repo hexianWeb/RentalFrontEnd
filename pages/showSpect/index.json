@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "确认信息",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "HouseCard":"../../components/HouseCard/index"
+  }
+}

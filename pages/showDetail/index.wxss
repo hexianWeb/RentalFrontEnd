@@ -1,0 +1,95 @@
+.Container .house_img {
+  padding: 12rpx;
+  box-shadow: 2px 2px 10px #ccc;
+}
+.Container .title {
+  margin-top: 10rpx;
+  font-size: 33rpx;
+  font-weight: 550;
+  color: #1a1a1a;
+  margin-left: 15rpx;
+}
+.Container .hotel_info {
+  margin-top: 20rpx;
+}
+.Container .hotel_info .hotel_name {
+  color: black;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.Container .hotel_info .pay {
+  margin-top: 20rpx;
+  display: flex;
+}
+.Container .hotel_info .pay .hotel_price {
+  flex: 5;
+  color: #da2020;
+  font-size: 28rpx;
+}
+.Container .hotel_info .pay .hotel_price .bold {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.Container .hotel_info .pay .payfor {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  color: #888888;
+}
+.Container .ad_info .ad {
+  margin-top: 15rpx;
+  padding-left: 10rpx;
+  margin-bottom: 15rpx;
+  border-left: 10rpx solid #ff6f71;
+}
+.Container .ad_info .ad:nth-child(2) {
+  border-left: 10rpx solid #bbbbbb;
+}
+.Container .ad_info .ad:nth-child(3) {
+  border-left: 10rpx solid #bbbbbb;
+}
+.Container .address {
+  margin-top: 20rpx;
+  padding-bottom: 13rpx;
+}
+.Container .address .dent_info {
+  padding: 0;
+}
+.Container .address .dent_info .dent {
+  margin-bottom: 30rpx;
+}
+.Container .address .hotel_fundmentally {
+  margin-top: 25rpx;
+}
+.Container .address .hotel_fundmentally .fundment {
+  margin-top: 45rpx;
+  text-align: center;
+}
+.Container .address .master_info {
+  margin-top: 25rpx;
+}
+.Container .address .master_info .master_cell {
+  margin-top: 30rpx;
+}
+.Container .address .master_info .master_cell .fundment {
+  margin-top: 20rpx;
+  text-align: center;
+}
+.Container .address .map {
+  margin-top: 45rpx;
+  display: flex;
+  margin-bottom: 400rpx;
+}
+.Container .address .map .map_title {
+  flex: 5;
+}
+.Container .address .map .map_title .map_info {
+  width: 100%;
+  float: right;
+  text-align: right;
+}
+.Container .bottom_tool {
+  margin-top: 20rpx;
+}

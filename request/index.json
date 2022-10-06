@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "van-overlay": "@vant/weapp/overlay/index"
+  }
+}

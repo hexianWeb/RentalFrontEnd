@@ -1,0 +1,29 @@
+<view class="container">
+<view class="userinfo">
+ <van-image
+    round
+    width="10rem"
+    height="10rem"
+    src="{{picRoot}}{{userInfo.avatar}}"
+    /> 
+  </view>
+</view>
+<van-popup show="{{ show }}" bind:close="onClose">
+  <van-uploader 
+    file-list="{{ fileList }}"
+    max-count="1"
+    preview-full-image
+    bind:after-read="afterRead"
+    upload-text="更新头像"
+  />
+</van-popup>
+<view class="master_info">
+  <van-divider contentPosition="center" textColor="#1989fa" bindtap="uploadImg">更新头像</van-divider>
+  <van-cell title="用户名" icon="user-o"value="{{userInfo.user_name}}" />
+  <van-cell title="电话" icon="phone-o"value="{{userInfo.user_phone}}"/>
+  <van-cell title="性别" icon="like-o"value="{{userInfo.sex}}"/>
+  <van-cell title="开通时间" icon="clock-o"value="{{userInfo.add_time}}"/>
+  <van-cell title="是否实名认证" icon="records"value="{{userInfo.authStatus==0?'否':'是'}}"/>
+  <van-cell title="邮箱地址" icon="envelop-o"value="{{userInfo.user_email}}"/>
+  <!-- <van-divider contentPosition="center">目前评分</van-divider> -->
+</view>

@@ -1,0 +1,68 @@
+<!--pages/search/index.wxml-->
+<searchInput></searchInput>
+<!-- 静态广告开始 -->
+<view class="container">
+  <!-- 广告部分 -->
+<view class="ad">
+  <view class="ad_text">
+    租房情报局
+</view>
+<view class="ad_zhuye">
+  <view class="one_item">
+    <view>
+      性价比独卫好房
+    </view>
+  </view>
+  <view class="two_item">
+    3个月起租
+    租期灵活0服务费
+    </view>
+</view>
+</view>
+<!-- 广告部分 -->
+
+<!-- 弹出内容  -->
+<van-popup show="{{ show }}" bind:close="onClose"   position="top"
+>
+<!-- 三级地图 -->
+<van-area area-list="{{ areaList }}" wx:if="{{showContent=='area'}}" value="36000"
+columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+bind:confirm="handleArea"
+/>
+<!-- 滑动 -->
+<view class="slider"wx:if="{{showContent=='rent'}}" >
+<view class="rentNumber">
+  <view class="left">
+    ￥{{rentValue[0]}}/月
+  </view>
+  <view class="right">
+    ￥{{rentValue[1]}}/月
+  </view>
+</view>
+  <van-slider min="800" max="4500" range value="{{rentValue}}" bar-height="4px" active-color="#ee0a24" bind:change="onSliderChange" 
+  >
+  </van-slider>
+  <view class="bottom">
+    <van-button custom-class="bottom"  size="small" color="#7232dd" bindtap="onReset">重置</van-button>
+    <van-button  custom-class="bottom"  size="small" color="linear-gradient(to right, #fc4a1a, #f7b733)" bindtap="handleRent">
+      确认
+    </van-button>
+  </view>
+</view>
+</van-popup>
+
+<!-- 工具栏 -->
+<view class="toolbar">
+  <van-tabs animated  swipeable active="{{}}" bind:change="onChange"  bindtap="onShowPop">
+  <van-tab  title="{{targetArea?targetArea:'区域'}}" name="area"></van-tab>
+  <!-- <van-tab  title="{{targetPrice?'平均'+targetPrice+'元/月':'租金'}}" name="rent"></van-tab> -->
+  <van-tab title="更多" name="more"></van-tab>
+</van-tabs>
+</view>
+
+<!-- 表单部分 -->
+   <view class="goodslist" wx:for="{{ListData}}" wx:key="index">
+      <van-divider />
+    <EstateCard EstateData="{{item}}"></EstateCard>
+    </view>
+</view>

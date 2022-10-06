@@ -1,0 +1,9 @@
+<!--pages/SpectList/index.wxml-->
+<!-- <text>pages/SpectList/index.wxml</text> -->
+<searchInput></searchInput>
+<van-notify id="van-notify" />
+<view wx:for="{{SpectList}}" 
+>
+<HouseCard HouseData="{{item.houseData}}" address="{{item.location.address}}"></HouseCard>
+<van-steps steps="{{ steps }}" active="{{ item.spect.spectStatus }}" data-address="{{item.location}}" data-status="{{ item.spect.spectStatus }}" catchtap="onyuekan" />
+</view>

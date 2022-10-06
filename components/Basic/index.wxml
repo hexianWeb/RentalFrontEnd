@@ -1,0 +1,27 @@
+<!--components/Basic/index.wxml-->
+<view>
+  <view class="container" >
+    <van-grid column-num="4">
+      <wxs module="foo">
+        module.exports = {
+         isInArray:function(arr,value) {
+           for(var i=0;i<arr.length;i++)
+           {
+             if (value === arr[i].value) {
+               return true
+             }
+           }
+           return false
+         }
+        }
+      </wxs>
+      <van-grid-item use-slot   wx:for="{{ _contentList }}" >
+        <image src="{{item.check_ImgUrl}}"  style="width: 45%; height: 70rpx;" wx:if="{{foo.isInArray(haveList,item.value)}}"></image>
+        <image src="{{item.ImgUrl}}" style="width: 45%; height: 70rpx;" wx:else=""></image>
+        <text style="{{foo.isInArray(haveList,item.value)?'':'text-decoration:line-through'}}">
+          {{item.value}}
+        </text>
+      </van-grid-item>
+    </van-grid>
+  </view>
+</view>

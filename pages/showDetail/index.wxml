@@ -1,0 +1,81 @@
+<!-- 房屋细节页面 -->
+<view class="Container">
+  <van-notify id="van-notify" />
+  <!-- 图片展示 -->
+  <view class="house_img">
+    <image src="{{picRoot}}{{HouseDetail.pic}}">
+    </image>
+  </view>
+  <!-- 信息展示 -->
+      <!-- 房屋信息 -->
+      <view class="hotel_info">
+        <van-row>
+            <van-col offset="1" span="23">
+                <view> <text class="hotel_name">{{HouseDetail.title}}</text></view>
+                <view class='pay'>
+                    <view class="hotel_price">
+                        <text>￥<text class="bold">{{HouseDetail.rent}}/月</text>（月付价）</text>
+                    </view>
+                    <view class="payfor">
+                        <text bindtap="payfor()">付款方式
+                        </text>
+                        <!-- <van-icon name="peer-pay" size="35rpx" /> -->
+                        <view class="iconfont icon-peer-pay" style="margin-left: 5rpx;"></view>
+                    </view>
+                </view>
+            </van-col>
+        </van-row>
+    </view>
+    <!-- 房屋信息 -->
+    <!-- 广告模块 -->
+    <van-row class="">
+        <van-col class="ad_info" offset="1" span="23">
+            <view class="ad">海燕计划 <text style="color:#ff6f71"> 毕业生租房月付/0押金/送搬家券</text></view>
+            <view class="ad">惠蕾计划 在校生专属，押金立减50%</view>
+            <view class="ad"><text style="color:#a8a8a8"> 入住礼包 领千元礼包，助力新生活</text></view>
+        </van-col>
+    </van-row>
+    <!-- 广告模块 -->
+    <view style="border-top: 7rpx solid #bbbbbb;"></view>
+  <!-- 房屋具体信息 -->
+  <view class="house_info">
+    <van-cell-group>
+      <van-cell title="面积" value="{{HouseDetail.useArea}}m²" />
+      <van-cell title="朝向" value="朝{{HouseDetail.orientataion}}" />
+      <van-cell title="租赁类型" value="{{HouseDetail.paymentMethod}}" />
+      <van-cell title="支付" value="{{HouseDetail.rentMethod}}" />
+      <van-cell title="楼层" value="{{HouseDetail.floor}}层" />
+    </van-cell-group>
+
+  </view>
+  <!-- 基础设施展示 -->
+     <van-divider contentPosition="left"
+     customStyle="color: #FF6F71; border-color: #FF6F71; font-size: 36rpx;"
+     > 基础设施</van-divider>
+  <view>
+    <Basic HouseType="{{HouseType}}" name="{{HouseDetail.floor}}"></Basic>
+  </view>
+  <!-- <view style="border-top: 7rpx solid #e68385;"></view> -->
+  <!-- 周边与交通 -->
+
+    <van-divider contentPosition="left"
+     customStyle="color: #FF6F71; border-color: #FF6F71; font-size: 36rpx;"
+     > 周边与交通</van-divider>
+  <mapDetail></mapDetail>  
+  <!-- 结算栏目 -->
+  <view class="bottom_tool">
+    <van-divider/>
+    <van-divider/>
+    <van-divider/>
+  </view>
+  <view>
+    <van-goods-action>
+        <van-goods-action-icon icon="chat-o" text="客服" dot bindtap="emitUserInfo"/>
+        <van-goods-action-icon icon="star" text="收藏" bindtap="handleStarHouse" wx:if="{{isStar}}"/>
+        <van-goods-action-icon icon="star-o" text="未收藏" bindtap="handleStarHouse" wx:else=""/>
+        <van-goods-action-button color="#FEB60A" text="转发此房" type="warning" bindtap="order" />
+        <van-goods-action-button color="#FF9800" text="预约看房" bindtap="getSpect"/>
+    </van-goods-action>
+  </view>
+
+</view>

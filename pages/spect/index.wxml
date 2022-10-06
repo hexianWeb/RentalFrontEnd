@@ -1,0 +1,60 @@
+<view class="container">
+  <HouseCard HouseData="{{HouseData}}" address="{{address}}">
+</HouseCard>
+<!-- 联系人信息 -->
+
+
+<van-cell-group>
+  <van-cell value="" custom-class="cell_title">
+  <view slot="title">
+    <view class="van-cell-text">联系人信息</view>
+  </view>
+  </van-cell>
+<!-- 姓名 -->
+  <van-cell value="{{UserInfo.realname}}" icon="user-o" custom-class="cell_margin">
+  <view slot="title">
+    <view class="van-cell-text">姓名</view>
+  </view>
+  </van-cell>
+  <!-- 称呼 -->
+    <van-cell value="{{UserInfo.sex=='男'?'先生':'女士'}}" icon="flower-o" custom-class="cell_margin">
+    <view slot="title">
+      <view class="van-cell-text">称呼</view>
+    </view>
+    </van-cell>
+    <!-- 手机号 -->
+    <van-cell value="{{UserInfo.user_phone}}" icon="phone-o" custom-class="cell_margin">
+    <view slot="title">
+      <view class="van-cell-text">手机号</view>
+    </view>
+    </van-cell>
+    <van-cell value="{{date?date:'随时可看'}}" icon="underway-o" is-link 
+     bindtap="chooseDate" custom-class="cell_margin">
+    <view slot="title">
+      <view class="van-cell-text">期望看房时间</view>
+    </view>
+    </van-cell>
+    <van-cell value="" custom-class="cell_title">
+      <view slot="title">
+        <view class="van-cell-text">给管家留言</view>
+      </view>
+    </van-cell>
+    <van-field
+      value="{{ message }}"
+      label="留言"
+      type="textarea"
+      placeholder="更多看房或找房需求(选填)"
+      autosize
+      border="{{ false }}"
+    />
+</van-cell-group>
+<view class="bottom_tool">
+<van-button type="primary" block color="#FFA001" bindtap="handleSpect">
+  <view>
+    提交预约
+  </view>
+</van-button>
+</view>
+<!-- 弹出日期选择 -->
+<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+</view>
