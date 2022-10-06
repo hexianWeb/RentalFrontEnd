@@ -6,6 +6,8 @@
 
 整个项目包含27个页面，涉及实时聊天、页面信息展示、地图展示导航等。写这个项目主要是练习和熟悉微信小程序和如何在微信小程序里使用websocket
 
+> 后端项目地址： [点击这里](https://github.com/hexianWeb/RentalSystemBackend)
+
 ## 技术栈
 
 ----------
